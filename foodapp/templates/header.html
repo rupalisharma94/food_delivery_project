@@ -1,0 +1,42 @@
+{% load static %}
+<!-- header section starts -->
+<header>
+    <a href="{% static 'images/logo1.png' %}" class="logo">PFH.</a>
+
+    <nav class="navbar">
+
+        <a class="{% if request.path == '/' %} active {% endif %}" href='/'>home</a>
+        <a class="{% if request.path == '/dishes/'%} active {% endif %}" href="/dishes">dishes</a>
+        <a class="{% if request.path == '/about/'%} active {% endif %}" href="/about">about</a>
+        <!-- <a href="#menu">menu</a> -->
+        <!-- <a href="#review">review</a> -->
+        <a class="{% if request.path == '/feedback/'%} active {% endif %}" href="/feedback">feedback</a>
+
+    </nav>
+
+    <div class="icons">
+        <a href="/adminindex" class="fas fa-user"></a>
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <!-- <a href="#" class="fas fa-heart"></a> -->
+        <a href="/cart" class="fas fa-shopping-cart"></a>
+        <a href="/profile" class="fas fa-user"></a>
+    </div>
+</header>
+<!-- header section ends -->
+
+<!-- searech form -->
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box" />
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- swiperjs cdn -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<!-- custom js file link -->
+<script src="{% static 'script/script.js' %}"></script>

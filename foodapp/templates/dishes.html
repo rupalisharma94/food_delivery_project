@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> {% load static %}
+    <link rel="stylesheet" href="{%  static 'styles/style.css' %}">
+
+    <title>dishes</title>
+</head>
+
+<body>
+
+
+    <!-- header section starts -->
+
+    {% include 'header.html' %}
+
+    <!-- header section ends -->
+
+
+
+
+    <!-- dishes section starts -->
+
+    <!--############ Dishes-Pizza ######################################################################################-->
+
+    <section class="dishes bg-grey pd-top" id="dishes">
+        <h3 class="sub-heading">our dishes</h3>
+        <h3 class="heading">pizza</h3>
+
+
+        <div class="box-container">
+            {% for Image in images %}
+            <form action="/adddish" method="POST">
+                {% csrf_token %}
+                <div class="box">
+                    <img src='/media/{{Image.image}}' alt="" srcset="" />
+                    <!-- <h3>{{ Image.caption }}</h3> -->
+                    <input type="text" name="caption" id="caption" value="{{ Image.caption }}" disabled>
+                    <!-- <span>₹{{ Image.price }}</span> -->
+                    <input type="text" name="price" id="price" value="{{ Image.price }}" disabled>
+                    <button href="#" type="submit" class="btn pink-btn">add to cart</button>
+                    <!-- <span><div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check for order</label> 
+                </div></span> -->
+                </div>
+            </form>
+            {% endfor %}
+        </div>
+        <!-- <div style="margin-top:20px;border:1px solid black; border-radius: 10px; padding: 10px;">
+                <div class="">
+                    <label>Email address</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <a href="#" type="submit" class="btn pink-btn">add to cart</a>
+            </div> -->
+
+
+    </section>
+
+    <!-- dishes section ends -->
+
+
+    {% include 'footer.html' %}
+
+
+
+    <!-- swiperjs cdn -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

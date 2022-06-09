@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PFH</title>
+
+    {% load static %}
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="{%  static 'styles/style.css' %}" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+
+</head>
+
+<body>
+
+  <!-- header section starts -->
+
+  {% include 'header.html' %}
+
+  <!-- header section ends -->
+<!-- order section starts  -->
+
+<section class="order pd-top pink-bg" id="order">
+    <h3 class="sub-heading">your feedback</h3>
+    <h1 class="heading">free and fast</h1>
+
+    <form action="">
+      <div class="inputBox">
+        <div class="input">
+          <span>your name</span>
+          <input type="text" placeholder="enter your name" />
+        </div>
+        <div class="input">
+          <span>your number</span>
+          <input type="number" placeholder="enter your number" />
+        </div>
+      </div>
+      <div class="inputBox">
+        <div class="input">
+          <span>your address</span>
+          <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="input">
+          <span>your message</span>
+          <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+
+      <input type="submit" value="submit" class="btn" />
+    </form>
+  </section>
+
+  <!-- order section ends -->
+
+  {% include 'footer.html' %}
+
+
+      <!-- swiperjs cdn -->
+      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+      <!-- custom js file link -->
+      <script src="{% static 'script/script.js' %}"></script>
+  </body>
+  
+  </html>

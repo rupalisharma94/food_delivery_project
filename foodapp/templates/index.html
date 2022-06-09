@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PFH</title>
+
+    {% load static %}
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="{%  static 'styles/style.css' %}" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+
+</head>
+
+<body>
+
+
+    <!-- #Header -->
+    {% include 'header.html' %}
+
+
+    <!-- #Home -->
+    {% include 'home.html' %}
+
+    <!-- About Section Started -->
+    <section class="about pd-top" id="about">
+        <!-- <h3 class="sub-heading">about us</h3>
+  <h3 class="heading">why choose us?</h3> -->
+
+        <div class="row">
+
+            <div class="image">
+                <img src="{% static 'images/about-img.png' %}" alt="" srcset="" />
+            </div>
+
+            <div class="content">
+                <h3>best food in the country</h3>
+                <br><br>
+
+
+
+
+
+                <br><br>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- About Section Ends -->
+
+
+    <!-- Menu -->
+
+
+    <section></section>
+
+
+
+
+    <!-- #Footer -->
+    {% include 'footer.html' %}
+
+
+
+
+
+
+
+    
+
+
+
+    <!-- swiperjs cdn -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link -->
+    <script src="{% static 'script/script.js' %}"></script>
+</body>
+
+</html>
